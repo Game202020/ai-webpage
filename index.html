@@ -1,14 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Web Page</title>
+    <title>موقع تحديد وتحويل الهوايات إلى عمل</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .search-box {
+            text-align: center;
+            margin-top: 30px;
+        }
+        input[type="text"], select {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .results {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .result-item {
+            background-color: #fff;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .result-item h3 {
+            color: #4CAF50;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My AI Web Page!</h1>
-    <p>Here we will implement AI features.</p>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <div class="header">
+        <h1>حدد هواياتك وحولها إلى عمل</h1>
+        <p>ساعدنا في تحديد هواياتك وسنرشدك إلى كيفية تحويلها إلى مهنة حقيقية!</p>
+    </div>
+
+    <div class="content">
+        <div class="search-box">
+            <h2>ادخل هواياتك</h2>
+            <input type="text" id="hobbies" placeholder="مثل: برمجة، رسم، تصوير">
+            <button onclick="findCareer()">ابحث</button>
+        </div>
+
+        <div class="results" id="results"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
